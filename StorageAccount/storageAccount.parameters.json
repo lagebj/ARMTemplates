@@ -4,6 +4,9 @@
     "parameters": {
         "storageAccountName": {
             "value": "ldsaivost"
+        },
+        "location": {
+            "value": "norwayeast"
         }
     }
 }
