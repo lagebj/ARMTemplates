@@ -1,2 +1,3 @@
-# ARMTemplates
-My collection of ARM templates
+# Introduction
+
+My personal collection of ARM templates.
