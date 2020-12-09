@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "virtualNetworkName": {
+      "value": "vnet-intdbhotel-shared-norwayeast-001"
+    },
+    "addressPrefixes": {
+      "value": [
+        "10.130.8.0/21"
+      ]
+    },
+    "subnets": {
+      "value": [
+        {
+          "name": "snet-intdbhotel-shared",
+          "properties": {
+            "addressPrefix": "10.130.8.0/23",
+            "routeTable": {
+              "id": "[resourceId('Microsoft.Network/routeTables', 'route-intdbhotel-tointernet')]"
+            },
+            "networkSecurityGroup": {
+              "id": "[resourceId('Microsoft.Network/networkSecurityGroups', 'nsg-snet-intdbhotel-shared')]"
+            },
+            "delegations": [
+                {
+                  "name": "intdbhotel-dlg",
+                  "properties": {
+                    "serviceName": "Microsoft.Sql/managedInstances"
+                  }
+                }
+              ]
+          }
+        }
+      ]
+    },
+    "location": {
+      "value": "norwayeast"
+    }
+  }
+}
