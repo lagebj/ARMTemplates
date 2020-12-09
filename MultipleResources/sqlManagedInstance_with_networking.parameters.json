@@ -21,11 +21,7 @@
             "destinationAddressPrefix": "10.130.8.0/23",
             "access": "Allow",
             "priority": 1000,
-            "direction": "Inbound",
-            "sourcePortRanges": [],
-            "destinationPortRanges": [],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            "direction": "Inbound"
           }
         },
         {
@@ -39,11 +35,7 @@
             "destinationAddressPrefix": "10.130.8.0/23",
             "access": "Allow",
             "priority": 1100,
-            "direction": "Inbound",
-            "sourcePortRanges": [],
-            "destinationPortRanges": [],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            "direction": "Inbound"
           }
         },
         {
@@ -57,11 +49,7 @@
             "destinationAddressPrefix": "10.130.8.0/23",
             "access": "Allow",
             "priority": 1200,
-            "direction": "Inbound",
-            "sourcePortRanges": [],
-            "destinationPortRanges": [],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            "direction": "Inbound"
           }
         },
         {
@@ -75,11 +63,7 @@
             "destinationAddressPrefix": "*",
             "access": "Deny",
             "priority": 4096,
-            "direction": "Inbound",
-            "sourcePortRanges": [],
-            "destinationPortRanges": [],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            "direction": "Inbound"
           }
         },
         {
@@ -93,11 +77,7 @@
             "destinationAddressPrefix": "VirtualNetwork",
             "access": "Allow",
             "priority": 1000,
-            "direction": "Outbound",
-            "sourcePortRanges": [],
-            "destinationPortRanges": [],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            "direction": "Outbound"
           }
         },
         {
@@ -111,11 +91,7 @@
             "destinationAddressPrefix": "VirtualNetwork",
             "access": "Allow",
             "priority": 1100,
-            "direction": "Outbound",
-            "sourcePortRanges": [],
-            "destinationPortRanges": [],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            "direction": "Outbound"
           }
         },
         {
@@ -129,11 +105,7 @@
             "destinationAddressPrefix": "VirtualNetwork",
             "access": "Allow",
             "priority": 1200,
-            "direction": "Outbound",
-            "sourcePortRanges": [],
-            "destinationPortRanges": [],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            "direction": "Outbound"
           }
         },
         {
@@ -147,11 +119,7 @@
             "destinationAddressPrefix": "VirtualNetwork",
             "access": "Allow",
             "priority": 1300,
-            "direction": "Outbound",
-            "sourcePortRanges": [],
-            "destinationPortRanges": [],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            "direction": "Outbound"
           }
         },
         {
@@ -165,15 +133,11 @@
             "destinationAddressPrefix": "*",
             "access": "Deny",
             "priority": 4096,
-            "direction": "Outbound",
-            "sourcePortRanges": [],
-            "destinationPortRanges": [],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            "direction": "Outbound"
           }
         },
         {
-          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-sqlmgmt-in-10-0-0-0-24-v9",
+          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-sqlmgmt-in-10-130-8-0-23-v9",
           "properties": {
             "description": "Allow MI provisioning Control Plane Deployment and Authentication Service",
             "protocol": "Tcp",
@@ -183,20 +147,17 @@
             "access": "Allow",
             "priority": 100,
             "direction": "Inbound",
-            "sourcePortRanges": [],
             "destinationPortRanges": [
               "9000",
               "9003",
               "1438",
               "1440",
               "1452"
-            ],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            ]
           }
         },
         {
-          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-corpsaw-in-10-0-0-0-24-v9",
+          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-corpsaw-in-10-130-8-0-23-v9",
           "properties": {
             "description": "Allow MI Supportability",
             "protocol": "Tcp",
@@ -206,18 +167,15 @@
             "access": "Allow",
             "priority": 101,
             "direction": "Inbound",
-            "sourcePortRanges": [],
             "destinationPortRanges": [
               "9000",
               "9003",
               "1440"
-            ],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            ]
           }
         },
         {
-          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-corppublic-in-10-0-0-0-24-v9",
+          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-corppublic-in-10-130-8-0-23-v9",
           "properties": {
             "description": "Allow MI Supportability through Corpnet ranges",
             "protocol": "Tcp",
@@ -227,17 +185,14 @@
             "access": "Allow",
             "priority": 102,
             "direction": "Inbound",
-            "sourcePortRanges": [],
             "destinationPortRanges": [
               "9000",
               "9003"
-            ],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            ]
           }
         },
         {
-          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-healthprobe-in-10-0-0-0-24-v9",
+          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-healthprobe-in-10-130-8-0-23-v9",
           "properties": {
             "description": "Allow Azure Load Balancer inbound traffic",
             "protocol": "*",
@@ -247,15 +202,11 @@
             "destinationAddressPrefix": "10.130.8.0/23",
             "access": "Allow",
             "priority": 103,
-            "direction": "Inbound",
-            "sourcePortRanges": [],
-            "destinationPortRanges": [],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            "direction": "Inbound"
           }
         },
         {
-          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-internal-in-10-0-0-0-24-v9",
+          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-internal-in-10-130-8-0-23-v9",
           "properties": {
             "description": "Allow MI internal inbound traffic",
             "protocol": "*",
@@ -265,15 +216,11 @@
             "destinationAddressPrefix": "10.130.8.0/23",
             "access": "Allow",
             "priority": 104,
-            "direction": "Inbound",
-            "sourcePortRanges": [],
-            "destinationPortRanges": [],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            "direction": "Inbound"
           }
         },
         {
-          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-services-out-10-0-0-0-24-v9",
+          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-services-out-10-130-8-0-23-v9",
           "properties": {
             "description": "Allow MI services outbound traffic over https",
             "protocol": "Tcp",
@@ -283,17 +230,14 @@
             "access": "Allow",
             "priority": 100,
             "direction": "Outbound",
-            "sourcePortRanges": [],
             "destinationPortRanges": [
               "443",
               "12000"
-            ],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            ]
           }
         },
         {
-          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-internal-out-10-0-0-0-24-v9",
+          "name": "Microsoft.Sql-managedInstances_UseOnly_mi-internal-out-10-130-8-0-23-v9",
           "properties": {
             "description": "Allow MI internal outbound traffic",
             "protocol": "*",
@@ -303,28 +247,7 @@
             "destinationAddressPrefix": "10.130.8.0/23",
             "access": "Allow",
             "priority": 101,
-            "direction": "Outbound",
-            "sourcePortRanges": [],
-            "destinationPortRanges": [],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
-          }
-        },
-        {
-          "name": "allow_appservice_mi_pep_inbound",
-          "properties": {
-            "protocol": "TCP",
-            "sourcePortRange": "*",
-            "destinationPortRange": "3342",
-            "sourceAddressPrefix": "AzureCloud",
-            "destinationAddressPrefix": "*",
-            "access": "Allow",
-            "priority": 1400,
-            "direction": "Inbound",
-            "sourcePortRanges": [],
-            "destinationPortRanges": [],
-            "sourceAddressPrefixes": [],
-            "destinationAddressPrefixes": []
+            "direction": "Outbound"
           }
         }
       ]
@@ -438,7 +361,7 @@
         {
           "name": "subnet-to-vnetlocal",
           "properties": {
-            "addressPrefix": "10.0.0.0/24",
+            "addressPrefix": "10.130.8.0/23",
             "nextHopType": "VnetLocal"
           }
         },
@@ -1614,29 +1537,8 @@
         "10.130.8.0/21"
       ]
     },
-    "subnets": {
-      "value": [
-        {
-          "name": "snet-intdbhotel-shared",
-          "properties": {
-            "addressPrefix": "10.130.8.0/23",
-            "routeTable": {
-              "id": "[resourceId('Microsoft.Network/routeTables', parameters('routeTableName'))]"
-            },
-            "networkSecurityGroup": {
-              "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
-            },
-            "delegations": [
-                {
-                  "name": "intdbhotel-dlg",
-                  "properties": {
-                    "serviceName": "Microsoft.Sql/managedInstances"
-                  }
-                }
-              ]
-          }
-        }
-      ]
+    "subnetAddressPrefix": {
+      "value": "10.130.8.0/23"
     },
     "managedInstanceName": {
       "value": "intdbhotel-sqlmi"
@@ -1645,7 +1547,7 @@
       "value": "userman"
     },
     "administratorLoginPassword": {
-      "value": "SuperSecretPw!"
+      "value": "SuperSecretPassword!v2"
     },
     "subnetName": {
       "value": "snet-intdbhotel-shared"

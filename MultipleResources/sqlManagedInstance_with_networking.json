@@ -53,10 +53,10 @@
         "description": "Virtual network address prefixes"
       }
     },
-    "subnets": {
-      "type": "array",
+    "subnetAddressPrefix": {
+      "type": "string",
       "metadata": {
-        "description": "Virtual network subnets"
+        "description": "Virtual network subnet address prefix"
       }
     },
     "managedInstanceName": {
@@ -159,11 +159,36 @@
       "name": "[parameters('virtualNetworkName')]",
       "apiVersion": "2020-05-01",
       "location": "[parameters('location')]",
+      "dependsOn": [
+        "[parameters('routeTableName')]",
+        "[parameters('networkSecurityGroupName')]"
+      ],
       "properties": {
         "addressSpace": {
           "addressPrefixes": "[parameters('addressPrefixes')]"
         },
-        "subnets": "[parameters('subnets')]"
+        "subnets": [
+          {
+            "name": "[parameters('subnetName')]",
+            "properties": {
+              "addressPrefix": "[parameters('subnetAddressPrefix')]",
+              "routeTable": {
+                "id": "[resourceId('Microsoft.Network/routeTables', parameters('routeTableName'))]"
+              },
+              "networkSecurityGroup": {
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
+              },
+              "delegations": [
+                {
+                  "name": "intdbhotel-dlg",
+                  "properties": {
+                    "serviceName": "Microsoft.Sql/managedInstances"
+                  }
+                }
+              ]
+            }
+          }
+        ]
       }
     },
     {
@@ -177,6 +202,9 @@
       "identity": {
         "type": "SystemAssigned"
       },
+      "dependsOn": [
+        "[parameters('virtualNetworkName')]"
+      ],
       "properties": {
         "administratorLogin": "[parameters('administratorLogin')]",
         "administratorLoginPassword": "[parameters('administratorLoginPassword')]",
