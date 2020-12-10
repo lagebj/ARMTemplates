@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "networkSecurityGroupName": {
-      "value": "nsg-snet-intdbhotel-shared"
+      "value": "nsg-snet-intdbhotel-sqlmi-prod"
     },
     "location": {
       "value": "norwayeast"
@@ -253,7 +253,7 @@
       ]
     },
     "routeTableName": {
-      "value": "route-intdbhotel-tointernet"
+      "value": "route-intdbhotel-sqlmi-prod"
     },
     "disableBgpRoutePropagation": {
       "value": false
@@ -1541,7 +1541,7 @@
       "value": "10.130.8.0/23"
     },
     "managedInstanceName": {
-      "value": "intdbhotel-sqlmi"
+      "value": "intdbhotel-prod-sqlmi"
     },
     "administratorLogin": {
       "value": "userman"
@@ -1550,7 +1550,7 @@
       "value": "SuperSecretPassword!v2"
     },
     "subnetName": {
-      "value": "snet-intdbhotel-shared"
+      "value": "snet-intdbhotel-sqlmi-prod"
     },
     "skuName": {
       "value": "GP_Gen5"

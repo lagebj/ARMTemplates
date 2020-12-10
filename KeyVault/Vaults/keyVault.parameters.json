@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "keyVaultName": {
+      "value": "lz-corp-intdbhotel-kv"
+    },
+    "location": {
+      "value": "norwayeast"
+    },
+    "enabledForDeployment": {
+      "value": false
+    },
+    "enabledForDiskEncryption": {
+      "value": false
+    },
+    "enabledForTemplateDeployment": {
+      "value": false
+    },
+    "tenantId": {
+      "value": "string"
+    },
+    "objectId": {
+      "value": "string"
+    },
+    "keysPermissions": {
+      "value": []
+    },
+    "secretsPermissions": {
+      "value": []
+    },
+    "skuName": {
+      "value": "Standard"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appServicePlanName": {
+      "value": "plan-aivo-prod-norwayeast"
+    },
+    "location": {
+      "value": "norwayeast"
+    },
+    "appServicePlanSku": {
+      "value": {
+        "name": "P1v2",
+        "tier": "PremiumV2",
+        "size": "P1v2",
+        "family": "Pv2",
+        "capacity": 1
+      }
+    }
+  }
+}
